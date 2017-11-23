@@ -5,7 +5,7 @@ Deloitte Machine Learning Guild
 
 COURSE: Machine Learning and NLP for Consulting
 
-1. course overview / command line / git
+1. course overview / command line / configuration
   Topic: common command line and git bash operations
   Homework: use the command line to search data across 1000 of server configuration files
 
