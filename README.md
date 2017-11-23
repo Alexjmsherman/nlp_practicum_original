@@ -5,20 +5,20 @@ Deloitte Machine Learning Guild
 
 COURSE: Machine Learning and NLP for Consulting
 
-1. course overview / command line / configuration
-  Topic: common command line and git bash operations
-  Homework: use the command line to search data across 1000 of server configuration files
+### 1. Configuration
+* Topic: Provide a course overview. Learn common git bash operations and how to use python config.ini files
+* Homework: use the command line to search data among 1000's of server configuration files
 
-2. Automation and Data Scraping
-  Topic: automate the process to collect data from https://www.opm.gov; begin using Spyder
-  Homework: automate the process to identify and download company 10-K annual reports
+### 2. Automation
+*  Topic: automate the process to collect data from https://www.opm.gov; begin using Spyder
+*  Homework: automate the process to identify and download company 10-K annual reports
 
-3. Advanced Python (refactor homework code)
-  Topic: review and refactor homework, discussing core Python syntax
+### 3. Refactoring
+*  Topic: review and refactor homework, discussing advanced Python syntax
 
-4. Docx
-  Topics: use docx to extract data from Microsoft Word Documents
-  Homework: structure the annual reports into sections and insert the sections into a database
+### 4. Text Extraction
+*  Topics: use docx to extract text from Microsoft Word Documents
+*  Homework: structure the annual reports into sections
 
 5. Databases
   Topics: use sqlalchemy to create and populate a database
