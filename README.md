@@ -14,27 +14,19 @@ COURSE: Machine Learning and NLP for Consulting
 *  Homework: automate the process to identify and download company 10-K annual reports
 
 ### 3. Refactoring
-*  Topic: review and refactor homework, discussing advanced Python syntax
+*  Topic: review and refactor homework, discussing advanced Python syntax and python project structure (e.g. __init__.py)
 
 ### 4. Text Extraction
-*  Topics: use docx to extract text from Microsoft Word Documents
+*  Topics: use docx to extract text from Microsoft Word Documents; begin using Jupyter Notebooks
 *  Homework: structure the annual reports into sections
 
-5. Databases
-  Topics: use sqlalchemy to create and populate a database
-    discuss python project structure (e.g. __init__.py, config files)
-  Homework: create and populate a sqlalchemy database
+### 5. Databases
+*  Topics: use sqlalchemy to create and populate a database
+*  Homework: create and populate a sqlalchemy database
 
-7. What is machine learning
-    Topics: Discuss unsupervised and supervised machine learning
-
-8. Pandas
-    Topics: Pandas refresher
-    Homework: Combine Deloitte open opportunity Excel Files
-
-9. Natural Language Processing (NLP)
-  Topics: text vectorization, TFIDF, stemming, lemmatization; begin using Jupyter Notebooks
-  Homework: clean text from annual reports
+### 6. Text Vectorization
+*  Topics: text vectorization, TFIDF, stemming, lemmatization
+*  Homework: clean text from annual reports
 
 6. Object Oriented Python
     Topics: create a class in python to understand docx; begin using PyCharm
@@ -73,3 +65,5 @@ COURSE: Machine Learning and NLP for Consulting
 
 20. Discuss applicability to current Deloitte projects
     Topics: determine next steps to apply NLP and ML to current projects
+
+21. Testing
