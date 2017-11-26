@@ -1,16 +1,12 @@
-# ml_guild
-Deloitte Machine Learning Guild
-
-
-
-COURSE: Machine Learning and NLP for Consulting
+# Deloitte Machine Learning Guild
+COURSE: NLP Practicum
 
 ### 1. Configuration
 * Topic: Provide a course overview. Learn common git bash operations and how to use python config.ini files
 * Homework: use the command line to search data among 1000's of server configuration files
 
 ### 2. Automation
-*  Topic: automate the process to collect data from https://www.opm.gov; begin using Spyder
+*  Topic: automate the process to collect data from https://www.annualreports.com; begin using Spyder
 *  Homework: automate the process to identify and download company 10-K annual reports
 
 ### 3. Refactoring
@@ -25,45 +21,36 @@ COURSE: Machine Learning and NLP for Consulting
 *  Homework: create and populate a sqlalchemy database
 
 ### 6. Text Vectorization
-*  Topics: text vectorization, TFIDF, stemming, lemmatization
+*  Topics: text vectorization, TFIDF
 *  Homework: clean text from annual reports
 
-6. Object Oriented Python
-    Topics: create a class in python to understand docx; begin using PyCharm
+### 7. Text Preprocessing
+* Topics: stemming, lemmatization, phrase_models in gensim, ner nltk, spacy
 
-10. Unsupervised ML (K Means)
-  Topics: Discuss clustering algorithms in scikit-learn
-  Homework: Cluster section names from annual reports
+### 8. Text Similarity
+* Topics: Document similarity, distance metrics, Word2Vec, fuzzy matching,
 
-11. Unsupervised ML (Topic Models)
-  Topics: discuss LDA and NMF for topic models in scikit-learn
-  Homework: Create topic models for annual report sections
+### 9. Unsupervised ML (Clustering)
+* Topics: Discuss clustering algorithms in scikit-learn
+* Homework: Cluster section names from annual reports
 
-13. Natural Language Processing 2
-    Topics: Document similarity, distance metrics, Word2Vec, fuzzy matching,
-    Homework: clean text from annual reports
+### 10. Unsupervised ML (Topic Models)
+* Topics: discuss LDA and NMF for topic models in scikit-learn
+* Homework: Create topic models for annual report sections
 
-15. Supervised ML (Naive Bayes)
-    Topics: Build a supervised algorithm in scikit-learn
-    Homework: Predict annual report sections on new data or
-        predict project sector in Deloitte open needs report to automate completing a form
+### 11. Object Oriented Python
+*   Topics: create a class in python to understand CountVectorizer; begin using PyCharm
 
-16. Model Evaluation 1
-    Topics: Train Test Split
-    Homework: Fix supervised model in last homework
+### 12 Logging
 
-17. Model Evaluation 2
-    Topics: Classification Metrics (confusion matrix, ROC curve)
-    Homework: Evaluate model in last homework
+### 13 Executables
+* argparse
 
-18. Model Evaluation 3 & Feature Engineering
-    Topics: Feature Engineering (Standardization)
+# Other Topics to include
 
-19. Advanced Scikit-learn
-    Topics: Feature Engineering 2  (Pipeline)
-    Homework: Kaggle Competition
+### VirtualEnv
 
-20. Discuss applicability to current Deloitte projects
-    Topics: determine next steps to apply NLP and ML to current projects
+### Testing
 
-21. Testing
+### Discuss applicability to current Deloitte projects
+* Topics: determine next steps to apply NLP and ML to current projects
