@@ -1,5 +1,4 @@
-# Deloitte Machine Learning Guild
-COURSE: NLP Practicum
+# Deloitte Machine Learning Guild - NLP Practicum
 
 ### 1. Configuration
 * Topic: Provide a course overview. Learn common git bash operations and how to use python config.ini files
