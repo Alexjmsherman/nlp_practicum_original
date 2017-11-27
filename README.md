@@ -1,4 +1,4 @@
-# Deloitte Machine Learning Guild - NLP Practicum
+# Machine Learning Guild - NLP Practicum
 
 ### 1. Configuration
 * Topic: Provide a course overview. Learn common git bash operations and how to use python config.ini files
@@ -41,6 +41,7 @@
 *   Topics: create a class in python to understand CountVectorizer; begin using PyCharm
 
 ### 12 Logging
+* Topics: Determine how to capture, format, and send logging messages to a variety of output. Exception Handling.
 
 ### 13 Executables
 * argparse
