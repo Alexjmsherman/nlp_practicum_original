@@ -11,8 +11,8 @@
 *  Homework: automate the process to identify and download company 10-K annual reports
 
 ### 3. Refactoring
-*  Topics: review and refactor homework, discussing advanced Python syntax and python project structure (e.g. __init__.py)
-*  Technology: python, __init__.py
+*  Topics: review and refactor homework, discussing advanced Python syntax and python project structure
+*  Technology: python, \__init_\_.py
 
 ### 4. Text Extraction
 *  Topics: use docx to extract text from Microsoft Word Documents

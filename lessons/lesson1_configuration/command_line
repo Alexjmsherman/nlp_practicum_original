@@ -1,0 +1,44 @@
+Command Line Lesson plan:
+
+Commands Reference: https://www.git-tower.com/blog/posts/command-line-cheat-sheet
+
+1. navigate directories
+pwd
+cd
+ls
+
+2. Clone GitHub Account
+git clone url
+
+3. Exercise: Navigate through directories
+
+4. Create Files and Directories
+touch
+mkdir
+
+5. Remove Files/Directories
+rm
+
+6. Copy/Move files
+cp
+mv
+
+7. Observe Files
+head
+tail
+cat
+less
+
+8. Find Files
+find
+
+9. Grep Files
+grep
+
+10. Permissions
+chmod
+-https://help.ubuntu.com/community/FilePermissions
+-chmod permission number explanations: https://www.linux.org/threads/file-permissions-chmod.4124/
+
+11. Pipes
+|
