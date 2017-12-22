@@ -42,3 +42,19 @@ chmod
 
 11. Pipes
 |
+
+-----------------------------------------
+TEXT EDITOR: vim
+(http://www.openvim.com/)
+
+1. Open Text Editor
+vim
+
+2. Insert mode to add new text
+i
+
+3. Exit vim
+press Esc
+press Shift+:
+:q!  -to quit without saving
+:wq  -to quit and save
