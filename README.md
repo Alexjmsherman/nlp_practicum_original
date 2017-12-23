@@ -15,7 +15,7 @@
 *  Technology: python, \__init_\_.py, Spyder
 
 ### 4. Text Extraction
-*  Topics: use docx to extract text from Microsoft Word Documents
+*  Topics: use docx to extract text from Microsoft Word Documents. Discuss PyCharm debugger.
 *  Technology: docx
 *  Homework: structure the annual reports into sections
 
