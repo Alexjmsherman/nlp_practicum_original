@@ -12,12 +12,12 @@ BASE_URL = config['REFACTORING']['BASE_URL']
 
 
 def main():
-    urls = get_COMPANY_annual_report_urls(COMPANY)
+    urls = get_company_annual_report_urls(COMPANY)
     output_paths = create_output_paths(urls, COMPANY)
     download_annual_reports(urls, output_paths)
 
 
-def get_COMPANY_annual_report_urls(COMPANY):
+def get_company_annual_report_urls(COMPANY):
     """ collect all of the urls for the numerous pdf annual reports
     of a specified COMPANY
 
@@ -25,11 +25,10 @@ def get_COMPANY_annual_report_urls(COMPANY):
     :return urls: list of urls for the annual report pdfs for the COMPANY
     """
 
-    BASE_URL = r'http://www.annualreports.com'
-    COMPANY_url = r'{}/COMPANY/{}'.format(BASE_URL,COMPANY)
+    company_url = r'{}/COMPANY/{}'.format(BASE_URL, COMPANY)
 
     # find all links on page
-    r = requests.get(COMPANY_url)
+    r = requests.get(company_url)
     b = BeautifulSoup(r.text, 'lxml')
     annual_reports = b.find_all('ul', attrs={'class':'links'})
 

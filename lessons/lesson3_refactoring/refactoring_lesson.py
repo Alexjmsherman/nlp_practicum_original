@@ -22,8 +22,8 @@ BASE_URL = config['REFACTORING']['BASE_URL']
 """
 
 # find all the html that stores the pdf urls
-COMPANY_url = r'{}/COMPANY/{}'.format(BASE_URL,COMPANY)
-r = requests.get(COMPANY_url)
+company_url = r'{}/COMPANY/{}'.format(BASE_URL, COMPANY)
+r = requests.get(company_url)
 b = BeautifulSoup(r.text, 'lxml')
 annual_reports = b.find_all('ul', attrs={'class':'links'})
 
@@ -33,7 +33,7 @@ for report in annual_reports:
     try:
         # create the report_url to download the pdf
         report_name = report.find('a')['href']
-        report_url = ''.join([BASE_URL,report_name])
+        report_url = ''.join([BASE_URL, report_name])
         urls.append(report_url)
     # handle expected errors for links on the page that are not for pdfs
     except TypeError:

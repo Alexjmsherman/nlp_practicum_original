@@ -7,16 +7,16 @@
 
 ### 2. Automation
 *  Topics: automate the process to collect data from https://www.annualreports.com
-*  Technology: Spyder, BeautifulSoup, requests
+*  Technology: Jupyter Notebooks, BeautifulSoup, requests
 *  Homework: automate the process to identify and download company 10-K annual reports
 
 ### 3. Refactoring
-*  Topics: review and refactor homework, discussing advanced Python syntax and python project structure
-*  Technology: python, \__init_\_.py
+*  Topics: review and refactor homework, discussing advanced Python syntax and set up python project structure
+*  Technology: python, \__init_\_.py, Spyder
 
 ### 4. Text Extraction
 *  Topics: use docx to extract text from Microsoft Word Documents
-*  Technology: docx, Jupyter Notebooks
+*  Technology: docx
 *  Homework: structure the annual reports into sections
 
 ### 5. Databases
