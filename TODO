@@ -6,8 +6,13 @@ Username: https://help.github.com/articles/setting-your-username-in-git/
 Email: https://help.github.com/articles/setting-your-commit-email-address-in-git/
 -convert command line txt into GitHub README
 -create video of homework answers
+-Add configuration file to project and lessons
 
-Lesson 2:
+Lesson 2: Automation
+-create image of automation process
+-Slide of libraries, patterns, syntax
+-Slide of request, html, extract tag, store in list, iterate through, download, store locally
+
 
 
 Text Vectorization
