@@ -31,7 +31,7 @@
 
 ### 7. Text Preprocessing
 * Topics: stemming, lemmatization, and phrase_models
-*  Technology: nltk, virtualenv, spacy, gensim
+*  Technology: conda virtual environments, nltk, spacy, gensim
 
 ### 8. Text Similarity
 * Topics: Document similarity, distance metrics, Word2Vec, fuzzy matching,

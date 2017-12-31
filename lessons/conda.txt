@@ -1,0 +1,24 @@
+conda vs pip vs virtualenv
+file:///Users/alex/Downloads/conda-cheatsheet.pdf
+
+Video: Managing python environments with conda
+https://www.youtube.com/watch?v=EGaw6VXV3GI
+
+Effectively using open source with conda
+ppt: https://www.slideshare.net/teoliphant/effectively-using-open-source-with-conda
+
+create a virtual env with conda
+http://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
+
+
+installation
+# create an environment with all anaconda packages
+condo create —-name mlguild python=3.6 anaconda
+
+# add condo-forge to provide ease of access to install python packages
+conda config --add channels conda-forge
+
+# add new kernel to jupyer notebook to access kernel
+source activate myenv
+python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
+http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments
