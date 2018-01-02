@@ -30,19 +30,19 @@
 *  Homework: clean text from annual reports
 
 ### 7. Text Preprocessing
-* Topics: stemming, lemmatization, and phrase_models
-*  Technology: nltk, spacy, gensim
+* Topics: lemmatization, phrase_models, POS tagging
+*  Technology: spacy, gensim
 
-### 10. Unsupervised ML (Topic Models)
-* Topics: discuss LDA and NMF for topic models
-* Technology: scikit-learn
+### 8. Unsupervised ML (Topic Models)
+* Topics: discuss LSI, LDA, and NMF for topic models
+* Technology: gensim
 * Homework: Create topic models for annual report sections
 
-### 8. Text Similarity
-* Topics: Document similarity, distance metrics, Word2Vec, fuzzy matching,
-* Technology: gensim, spacy
+### 9. Text Similarity
+* Topics: distance metrics, cosine similarity
+* Technology: gensim
 
-### 9. Unsupervised ML (Clustering)
+### 10. Unsupervised ML (Clustering)
 * Topics: Discuss clustering algorithms in scikit-learn
 *  Technology: scikit-learn
 * Homework: Cluster section names from annual reports
