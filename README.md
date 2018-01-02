@@ -25,13 +25,18 @@
 *  Homework: create and populate a sqlalchemy database
 
 ### 6. Text Vectorization
-*  Topics: text vectorization, TFIDF
+*  Topics: vector spact model, TFIDF
 *  Technology: scikit-learn
 *  Homework: clean text from annual reports
 
 ### 7. Text Preprocessing
 * Topics: stemming, lemmatization, and phrase_models
 *  Technology: conda virtual environments, nltk, spacy, gensim
+
+### 10. Unsupervised ML (Topic Models)
+* Topics: discuss LDA and NMF for topic models
+* Technology: scikit-learn
+* Homework: Create topic models for annual report sections
 
 ### 8. Text Similarity
 * Topics: Document similarity, distance metrics, Word2Vec, fuzzy matching,
@@ -41,11 +46,6 @@
 * Topics: Discuss clustering algorithms in scikit-learn
 *  Technology: scikit-learn
 * Homework: Cluster section names from annual reports
-
-### 10. Unsupervised ML (Topic Models)
-* Topics: discuss LDA and NMF for topic models
-* Technology: scikit-learn
-* Homework: Create topic models for annual report sections
 
 ### 11. Object Oriented Python
 *   Topics: create a class in python to understand CountVectorizer; begin using PyCharm
