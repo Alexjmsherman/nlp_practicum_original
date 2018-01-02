@@ -1,7 +1,7 @@
 # Machine Learning Guild - NLP Practicum
 
 ### 1. Configuration
-*  Topics: Provide a course overview. Learn common git bash operations and how to use python config.ini files
+*  Topics: Course overview, git bash operations, python config.ini files, conda virtual environments
 *  Technology: git bash, command line, configparser
 *  Homework: use the command line to search data among 1000's of server configuration files
 
@@ -25,13 +25,13 @@
 *  Homework: create and populate a sqlalchemy database
 
 ### 6. Text Vectorization
-*  Topics: vector spact model, TFIDF
+*  Topics: vector space model, TFIDF
 *  Technology: scikit-learn
 *  Homework: clean text from annual reports
 
 ### 7. Text Preprocessing
 * Topics: stemming, lemmatization, and phrase_models
-*  Technology: conda virtual environments, nltk, spacy, gensim
+*  Technology: nltk, spacy, gensim
 
 ### 10. Unsupervised ML (Topic Models)
 * Topics: discuss LDA and NMF for topic models
