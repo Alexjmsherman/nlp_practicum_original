@@ -14,6 +14,15 @@ Lesson 2: Automation
 -Slide of request, html, extract tag, store in list, iterate through, download, store locally
 -remove deloitte scrape example as it is not allowed by robots.txt
 
+Lesson 5: Databases
+- update db homework
+
+Lesson 7: Text Preprocessing
+SpaCy installation:
+    conda install -c conda-forge spacy
+    Download Microsoft Visual C++: http://landinghub.visualstudio.com/visual-cpp-build-tools
+    python -m spacy download en_core_web_lg
+
 Create guide to hw loe
 1 configuration - low
 2 automation - medium
@@ -24,6 +33,7 @@ Create guide to hw loe
 Text Vectorization
 -create sparse matrix image
 -add image of log
+-add exercise at end
 
 NLP
 -create nltk installation instructions
