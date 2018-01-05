@@ -1,0 +1,110 @@
+import os
+import time
+
+import PyPDF2
+import docx
+import requests
+from bs4 import BeautifulSoup
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from project.database import AnnualReport
+
+DB_PATH = r'sqlite:///C:\Users\alsherman\PycharmProjects\annual_report\database\annual_report.db'
+output_dir_path = r'C:\Users\alsherman\PycharmProjects\annual_report\raw_data'
+
+# create object to query database
+engine = create_engine(DB_PATH)
+Session = sessionmaker(bind=engine)
+session = Session()
+
+
+class AnnualReportDownloader:
+
+    def __init__(self):
+        self.base_url = r'http://www.annualreports.com'
+        self.urls = []
+        self.companies = []
+
+    def get_annual_report_urls(self, company):
+        """ collect all of the urls for the numerous pdf annual reports
+        of a specified company
+
+        :param company: company name, used to search for annual reports
+        :return urls: list of urls for the annual report pdfs for the company
+        """
+
+        self.companies.append(company)
+
+        # find all links on page
+        company_url = r'{}/Company/{}'.format(self.base_url, company)
+        r = requests.get(company_url)
+        b = BeautifulSoup(r.text, 'lxml')
+        annual_reports = b.find_all('ul', attrs={'class':'links'})
+
+        urls = []
+        for report in annual_reports:
+            try:
+                # create the report_url to download the pdf
+                report_name = report.find('a')['href']
+                report_url = ''.join([self.base_url, report_name])
+                self.urls.append((company, report_url))
+            # handle expected errors for links on the page that are not for pdfs
+            except TypeError:
+                continue
+            except KeyError:
+                continue
+
+    def download_annual_reports(self):
+        """ Download all of the annual reports in self.urls """
+
+        output_paths = self.create_output_paths()
+
+        for company, url in self.urls:
+            # get directory to store annual report
+            filepath = output_paths[url]
+            filename = filepath.split('\\')[-1]
+
+            # skip files that have already been downloaded
+            if filename in os.listdir(os.path.join(output_dir_path, company)):
+                continue
+
+            # download pdf
+            r = requests.get(url)
+            print('downloaded: {}'.format(url))
+
+            # write pdf to local directory
+            with open(filepath, 'wb') as f:
+                f.write(r.content)
+
+            # required delay, stated in the robots.txt
+            time.sleep(10)  # ten seconds
+
+    def create_output_paths(self):
+        """ create a mapping a file paths for the report_names and
+        directory paths to store each annual report locally
+
+        NOTE:annual_report/raw_data/[company_name]
+
+        :return output_paths: dict with mapping - {'report name': 'directory_path'}
+        """
+
+        output_paths = {}
+        for ind, (company, url) in enumerate(self.urls):
+            # parse the year from the annual report report_name
+            year = url.split('_')[-1].split('.')[0]
+
+            # The first annual report on a page is stored in different html
+            # and does not have the year in the report name
+            # e.g. ('Click/[#]') instead of ('NYSE_ORCL_2015.pdf')
+            # add one to the year of the last annual report to get the correct year
+            if ind == 0:
+                year = str(int(self.urls[1][1].split('_')[-1].split('.')[0])+1)
+
+            # create a file path to identify how to name a file
+            # and where to store it locally
+            filename = '{}_annual_report_{}.pdf'.format(company, year)
+            filepath = os.path.join(output_dir_path, company, filename)
+            output_paths[url] = filepath
+
+        return output_paths
