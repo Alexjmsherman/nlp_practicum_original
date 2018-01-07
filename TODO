@@ -15,9 +15,12 @@ Lesson 2: Automation
 -Slide of libraries, patterns, syntax
 -Slide of request, html, extract tag, store in list, iterate through, download, store locally
 -remove deloitte scrape example as it is not allowed by robots.txt
+-add method to check if 10k has already been downloaded (no not d/l again)
 
 Lesson 4: Text Extraction
 -change oracle.zip at end of notebook to Southwest
+-add logging
+-add multiprocessing to document extractor
 
 Lesson 5: Databases
 - update db homework
