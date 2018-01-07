@@ -1,32 +1,23 @@
 import os
 import time
-
-import PyPDF2
-import docx
 import requests
 from bs4 import BeautifulSoup
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from configparser import ConfigParser, ExtendedInterpolation
 
-from project.database import AnnualReport
-
-DB_PATH = r'sqlite:///C:\Users\alsherman\PycharmProjects\annual_report\database\annual_report.db'
-output_dir_path = r'C:\Users\alsherman\PycharmProjects\annual_report\raw_data'
-
-# create object to query database
-engine = create_engine(DB_PATH)
-Session = sessionmaker(bind=engine)
-session = Session()
+config = ConfigParser(interpolation=ExtendedInterpolation())
+config.read('../config.ini')
+OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
+BASE_URL =  config['AUTOMATION']['BASE_URL']
 
 
 class AnnualReportDownloader:
 
-    def __init__(self):
-        self.base_url = r'http://www.annualreports.com'
+    def __init__(self, company):
+        self.base_url = BASE_URL
         self.urls = []
-        self.companies = []
+        self.company = company
 
-    def get_annual_report_urls(self, company):
+    def get_annual_report_urls(self):
         """ collect all of the urls for the numerous pdf annual reports
         of a specified company
 
@@ -34,10 +25,8 @@ class AnnualReportDownloader:
         :return urls: list of urls for the annual report pdfs for the company
         """
 
-        self.companies.append(company)
-
         # find all links on page
-        company_url = r'{}/Company/{}'.format(self.base_url, company)
+        company_url = r'{}/Company/{}'.format(self.base_url, self.company)
         r = requests.get(company_url)
         b = BeautifulSoup(r.text, 'lxml')
         annual_reports = b.find_all('ul', attrs={'class':'links'})
@@ -48,7 +37,7 @@ class AnnualReportDownloader:
                 # create the report_url to download the pdf
                 report_name = report.find('a')['href']
                 report_url = ''.join([self.base_url, report_name])
-                self.urls.append((company, report_url))
+                self.urls.append((self.company, report_url))
             # handle expected errors for links on the page that are not for pdfs
             except TypeError:
                 continue
@@ -66,7 +55,7 @@ class AnnualReportDownloader:
             filename = filepath.split('\\')[-1]
 
             # skip files that have already been downloaded
-            if filename in os.listdir(os.path.join(output_dir_path, company)):
+            if filename in os.listdir(os.path.join(OUTPUT_DIR_PATH, company)):
                 continue
 
             # download pdf
@@ -104,7 +93,7 @@ class AnnualReportDownloader:
             # create a file path to identify how to name a file
             # and where to store it locally
             filename = '{}_annual_report_{}.pdf'.format(company, year)
-            filepath = os.path.join(output_dir_path, company, filename)
+            filepath = os.path.join(OUTPUT_DIR_PATH, company, filename)
             output_paths[url] = filepath
 
         return output_paths
