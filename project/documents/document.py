@@ -23,6 +23,7 @@ class Document:
         :param table_text: if True, extract the text from document tables
         """
 
+        self.filename = path.split('\\')[-1]
         self.paragraphs = None
         self.text = None
         self.table_text = None
@@ -39,7 +40,6 @@ class Document:
 
         # use docx to read document xml
         doc = docx.Document(self.path)
-
         if doc_text:
             self.paragraphs = doc.paragraphs
             self.text = ' '.join([para.text.strip() for para in self.paragraphs if para.text.strip() != ''])
