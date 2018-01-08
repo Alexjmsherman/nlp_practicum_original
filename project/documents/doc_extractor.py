@@ -3,7 +3,7 @@ from project.documents.document import Document
 from configparser import ConfigParser, ExtendedInterpolation
 
 config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('../../config.ini')
+config.read('../config.ini')
 IN_PROGRESS_PATH = config['DOCX']['IN_PROGRESS_PATH']
 COMPLETED_PATH = config['DOCX']['COMPLETED_PATH']
 

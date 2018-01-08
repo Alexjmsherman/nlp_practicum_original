@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from configparser import ConfigParser, ExtendedInterpolation
 
 config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('../../config.ini')
+config.read('../config.ini')
 PROJECT_DB_PATH = config['DATABASES']['PROJECT_DB_PATH']
 
 
@@ -23,14 +23,15 @@ class Documents(Base):
     document_id = Column(Integer(), primary_key=True)
     path = Column(Text())
     filename = Column(Text())
+    year = Column(Integer())
     document_text = Column(Text())
     table_text = Column(Text())
-    last_modified_by = Column(Text())
     author = Column(Text())
+    last_modified_by = Column(Text())
     created = Column(Text())
-    last_printed = Column(Text())
     revision = Column(Text())
     num_tables = Column(Text())
+
 
 class Sections(Base):
     __tablename__ = 'SECTIONS'

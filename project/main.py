@@ -5,12 +5,12 @@ from project.database.db_populator import db_populator
 
 def main():
     # identify and download new annual report (10-K) reports
-    annual_report = AnnualReportDownloader(company='southwest-airlines-co')
-    annual_report.get_annual_report_urls()
-    annual_report.download_annual_reports()
+    #annual_report = AnnualReportDownloader(company='southwest-airlines-co')
+    #annual_report.get_annual_report_urls()
+    #annual_report.download_annual_reports()
 
     # extract the document text and load into a database
-    for doc in extract_document_text:
+    for doc in extract_document_text():
         # load document and sections into database
         db_populator(doc)
 

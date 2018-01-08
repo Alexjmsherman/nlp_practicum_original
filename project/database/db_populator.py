@@ -3,8 +3,9 @@ from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser, ExtendedInterpolation
 from project.database.models import Documents, Sections
 
+
 config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('../../config.ini')
+config.read('../config.ini')
 PROJECT_DB_PATH = config['DATABASES']['PROJECT_DB_PATH']
 
 # create object to query database
@@ -15,8 +16,8 @@ session = Session()
 
 def db_populator(doc):
     # insert a document (one for each annual report)
-    doc = Documents(
-          completed_path=doc.completed_path
+    doc_row = Documents(
+          path=doc.completed_path
         , filename=doc.filename
         , year = int(doc.filename.split('_')[-1].replace('.docx',''))
         , document_text=doc.text
@@ -27,7 +28,7 @@ def db_populator(doc):
         , revision=doc.revision
         , num_tables=doc.num_tables
     )
-    session.add(doc)
+    session.add(doc_row)
 
     # insert each document section
     sections = doc.get_sections_dict()
@@ -41,6 +42,3 @@ def db_populator(doc):
 
     # commit (save) all annual report documents and sections to the database
     session.commit()
-
-
-if __name__ == "__main__": db_populator()

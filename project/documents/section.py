@@ -16,6 +16,7 @@ class Section:
         :param section_criteria: callables with criteria to define the start of a new section
         """
 
+        section_name = section_name.replace('\t',' ').replace('/S','').replace('\n','').strip()
         self.section_name = section_name.upper()
         self.section_text = []
         self.section_criteria_callables = [s_c for s_c in section_criteria]
@@ -25,9 +26,11 @@ class Section:
         # only occurs if the first paragraph is a section header
         if self.section_name == 'FIRST SECTION':
             self.section_name = ''
-        self.section_name = ' '.join([self.section_name, text.upper().strip()])
+        text = text.replace('\t',' ').replace('/S','').replace('\n','').strip()
+        self.section_name = ' '.join([self.section_name, text.upper()])
 
     def add_section_text(self, text):
+        text = text.replace('\t',' ').replace('/S','').replace('\n','').strip()
         self.section_text.append(text)
 
     def get_section_text(self):
