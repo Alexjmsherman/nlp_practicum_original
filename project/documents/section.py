@@ -18,6 +18,7 @@ class Section:
 
         section_name = section_name.replace('\t',' ').replace('/S','').replace('\n','').strip()
         self.section_name = section_name.upper()
+        self.criteria = None
         self.section_text = []
         self.section_criteria_callables = [s_c for s_c in section_criteria]
 
@@ -43,11 +44,11 @@ class Section:
 
     @staticmethod
     def paragraph_doesnt_have_text(p, alpha_only=True):
-        """ ignore paragraphs that do not contain any text
+        """ check if a paragraph contains text
 
         :param p: paragraph
-        :param alpha_only: if True, only keep paragraph that have at least one letter (e.g. ignore phone #)
-        :return: bool (True) if the paragraph is empty
+        :param alpha_only: if True, check if the paragraph has at least one letter (e.g. ignore phone #)
+        :return: bool (True) if the paragraph does not contain any text
         """
 
         empty_string = p.text.strip() == ''
@@ -72,5 +73,6 @@ class Section:
         for criteria_callable in self.section_criteria_callables:
             if criteria_callable(p):
                 section_header = True
+                self.criteria = str(criteria_callable)
 
         return section_header

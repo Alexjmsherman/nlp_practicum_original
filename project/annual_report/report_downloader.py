@@ -3,11 +3,16 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from configparser import ConfigParser, ExtendedInterpolation
+import logging
+from logging.config import fileConfig
 
 config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('../config.ini')
 OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
 BASE_URL =  config['AUTOMATION']['BASE_URL']
+
+fileConfig('logging_config.ini', disable_existing_loggers=False)
+logger = logging.getLogger(__name__)
 
 
 class AnnualReportDownloader:
@@ -38,10 +43,8 @@ class AnnualReportDownloader:
                 report_name = report.find('a')['href']
                 report_url = ''.join([self.base_url, report_name])
                 self.urls.append((self.company, report_url))
-            # handle expected errors for links on the page that are not for pdfs
-            except TypeError:
-                continue
-            except KeyError:
+            except (TypeError, KeyError):
+                # ignore expected errors for links on the page that are not for pdfs
                 continue
 
     def download_annual_reports(self):
@@ -55,12 +58,12 @@ class AnnualReportDownloader:
             filename = filepath.split('\\')[-1]
 
             # skip files that have already been downloaded
-            if filename in os.listdir(os.path.join(OUTPUT_DIR_PATH, company)):
+            if filename in os.listdir(OUTPUT_DIR_PATH):
                 continue
 
             # download pdf
             r = requests.get(url)
-            print('downloaded: {}'.format(url))
+            logger.info('downloaded: {}'.format(url))
 
             # write pdf to local directory
             with open(filepath, 'wb') as f:
@@ -93,7 +96,7 @@ class AnnualReportDownloader:
             # create a file path to identify how to name a file
             # and where to store it locally
             filename = '{}_annual_report_{}.pdf'.format(company, year)
-            filepath = os.path.join(OUTPUT_DIR_PATH, company, filename)
+            filepath = os.path.join(OUTPUT_DIR_PATH, filename)
             output_paths[url] = filepath
 
         return output_paths

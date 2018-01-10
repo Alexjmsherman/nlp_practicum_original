@@ -29,8 +29,8 @@ class Documents(Base):
     author = Column(Text())
     last_modified_by = Column(Text())
     created = Column(Text())
-    revision = Column(Text())
-    num_tables = Column(Text())
+    revision = Column(Integer())
+    num_tables = Column(Integer())
 
 
 class Sections(Base):
@@ -39,7 +39,9 @@ class Sections(Base):
     section_id = Column(Integer(), primary_key=True)
     filename = Column(Text())
     section_name = Column(Text())
+    criteria = Column(Text())
     section_text = Column(Text())
+    section_length = Column(Integer())
 
 
 if __name__ == "__main__":

@@ -1,20 +1,26 @@
 import os
 import docx
 from project.documents.section import Section
+from configparser import ConfigParser, ExtendedInterpolation
+
+config = ConfigParser(interpolation=ExtendedInterpolation())
+config.read('../config.ini')
+IN_PROGRESS_PATH = config['DOCX']['IN_PROGRESS_PATH']
+COMPLETED_PATH = config['DOCX']['COMPLETED_PATH']
 
 
 class Document:
     """ extract and structure the text from a single docx file into the following:
 
      doc_text: single string with the full text of the document
-     sections: document text structured in sections using hueristics from section_criteria module
+     sections: document text structured in sections using heuristics from section_criteria module
      tables: text from the tables in a document
      properties: document metadata such as author_name and created_date
 
      NOTE: only compatible with docx, not earlier Microsoft Word file formats like doc
      """
 
-    def __init__(self, path, completed_path, doc_text=True, sections=True, table_text=True, doc_properties=True):
+    def __init__(self, path, doc_text=True, sections=True, table_text=True, doc_properties=True):
         """
         :param path: directory path to document
         :param doc_text: if True, extract document text
@@ -23,7 +29,7 @@ class Document:
         :param table_text: if True, extract the text from document tables
         """
 
-        self.filename = path.split('\\')[-1]
+        self.filename = path
         self.paragraphs = None
         self.text = None
         self.table_text = None
@@ -33,13 +39,14 @@ class Document:
         self.last_printed = None
         self.revision = None
         self.num_tables = None
-        self.path = path
-        self.completed_path = completed_path
+        self.path = os.path.join(COMPLETED_PATH, path)
 
         self.sections = []  # container for section objects
 
         # use docx to read document xml
-        doc = docx.Document(self.path)
+        doc_current_path = os.path.join(IN_PROGRESS_PATH, path)
+        doc = docx.Document(doc_current_path)
+
         if doc_text:
             self.paragraphs = doc.paragraphs
             self.text = ' '.join([para.text.strip() for para in self.paragraphs if para.text.strip() != ''])
@@ -54,13 +61,13 @@ class Document:
             self._set_doc_properties(doc)
 
     def __repr__(self):
-        return "<DOCUMENT: {}>".format(self.path)
+        return "<DOCUMENT: {}>".format(self.filename)
 
     def get_sections_dict(self):
         """ extract the section_name: section_text key value pairs from the sections objects """
         sections_dict = {}
         for section in self.sections:
-            sections_dict[section.section_name] = section.get_section_text()
+            sections_dict[section.section_name] = {'criteria':section.criteria, 'text': section.get_section_text()}
 
         return sections_dict
 
