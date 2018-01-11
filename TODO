@@ -50,5 +50,6 @@ NLP
 Logging
 -add exercise
 -add image of logging process
-
+-16.6.7. LogRecord attributes
+  -https://docs.python.org/3/library/logging.html#logrecord-attributes
 

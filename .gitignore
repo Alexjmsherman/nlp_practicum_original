@@ -102,4 +102,5 @@ ENV/
 
 raw_data/
 .idea/
+project/logging/
 
