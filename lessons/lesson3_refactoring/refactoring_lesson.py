@@ -1,7 +1,9 @@
 """
 Refactoring Lesson
+Author: Alex Sherman | alsherman@deloitte.com
 
-Goal: Refactor the data scraping homework solution. Convert the code into functions.
+Goal: Refactor the data scraping homework solution. 
+      Convert the code into functions.
 """
 
 import os
@@ -9,12 +11,13 @@ import requests
 import time
 from bs4 import BeautifulSoup
 import configparser
+from configparser import ConfigParser, ExtendedInterpolation
 
-config = configparser.ConfigParser()
+config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('config.ini')
-OUTPUT_DIR_PATH = config['REFACTORING']['OUTPUT_DIR_PATH']
-COMPANY = config['REFACTORING']['COMPANY']
-BASE_URL = config['REFACTORING']['BASE_URL']
+OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
+BASE_URL = config['AUTOMATION']['BASE_URL']
+COMPANY = config['AUTOMATION']['COMPANY']
 
 
 """
@@ -22,7 +25,7 @@ BASE_URL = config['REFACTORING']['BASE_URL']
 """
 
 # find all the html that stores the pdf urls
-company_url = r'{}/COMPANY/{}'.format(BASE_URL, COMPANY)
+company_url = r'{}/Company/{}'.format(BASE_URL, COMPANY)
 r = requests.get(company_url)
 b = BeautifulSoup(r.text, 'lxml')
 annual_reports = b.find_all('ul', attrs={'class':'links'})
@@ -80,14 +83,16 @@ for ind, url in enumerate(urls):
 """
 
 for url in urls:
+    filepath = output_paths[url]
+            
     # download pdf
     r = requests.get(url)
 
-    # export pdf locally
-    filepath = output_paths[url]
+    # write pdf to local directory
     with open(filepath, 'wb') as f:
         f.write(r.content)
 
     # required delay, stated in the robots.txt
-    time.sleep(10)  # ten seconds
+    time.sleep(5)  # five seconds
+
 

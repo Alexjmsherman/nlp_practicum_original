@@ -1,14 +1,23 @@
+"""
+Refactoring Lesson
+Author: Alex Sherman | alsherman@deloitte.com
+
+Goal: Refactor the data scraping homework solution. 
+      Convert the code into functions.
+
+"""
+
 import os
 import requests
 import time
 from bs4 import BeautifulSoup
-import configparser
+from configparser import ConfigParser, ExtendedInterpolation
 
-config = configparser.ConfigParser()
+config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('config.ini')
-OUTPUT_DIR_PATH = config['REFACTORING']['OUTPUT_DIR_PATH']
-COMPANY = config['REFACTORING']['COMPANY']
-BASE_URL = config['REFACTORING']['BASE_URL']
+OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
+BASE_URL = config['AUTOMATION']['BASE_URL']
+COMPANY = config['AUTOMATION']['COMPANY']
 
 
 def main():
@@ -25,7 +34,7 @@ def get_company_annual_report_urls(COMPANY):
     :return urls: list of urls for the annual report pdfs for the COMPANY
     """
 
-    company_url = r'{}/COMPANY/{}'.format(BASE_URL, COMPANY)
+    company_url = r'{}/Company/{}'.format(BASE_URL, COMPANY)
 
     # find all links on page
     r = requests.get(company_url)
@@ -40,9 +49,7 @@ def get_company_annual_report_urls(COMPANY):
             report_url = ''.join([BASE_URL, report_name])
             urls.append(report_url)
         # handle expected errors for links on the page that are not for pdfs
-        except TypeError:
-            continue
-        except KeyError:
+        except (TypeError, KeyError):
             continue
 
     return urls
@@ -68,7 +75,8 @@ def create_output_paths(urls, COMPANY):
         # e.g. ('Click/[#]') instead of ('NYSE_ORCL_2015.pdf')
         # add one to the year of the last annual report to get the correct year
         if ind == 0:
-            year = str(int(urls[1].split('_')[-1].split('.')[0])+1)
+            previous_year = urls[1].split('_')[-1].split('.')[0] 
+            year = str(int(previous_year) + 1)
 
         # create a file path to identify how to name a file
         # and where to store it locally
@@ -86,16 +94,17 @@ def download_annual_reports(urls, output_paths):
     """
 
     for url in urls:
+        filepath = output_paths[url]
+                
         # download pdf
         r = requests.get(url)
 
         # write pdf to local directory
-        filepath = output_paths[url]
         with open(filepath, 'wb') as f:
             f.write(r.content)
 
         # required delay, stated in the robots.txt
-        time.sleep(10)  # ten seconds
+        time.sleep(5)  # five seconds
 
 
 if __name__ == "__main__": main()

@@ -42,7 +42,7 @@ class AnnualReportDownloader:
                 # create the report_url to download the pdf
                 report_name = report.find('a')['href']
                 report_url = ''.join([self.base_url, report_name])
-                self.urls.append((self.company, report_url))
+                self.urls.append(report_url)
             except (TypeError, KeyError):
                 # ignore expected errors for links on the page that are not for pdfs
                 continue
@@ -52,7 +52,7 @@ class AnnualReportDownloader:
 
         output_paths = self.create_output_paths()
 
-        for company, url in self.urls:
+        for url in self.urls:
             # get directory to store annual report
             filepath = output_paths[url]
             filename = filepath.split('\\')[-1]
@@ -66,11 +66,12 @@ class AnnualReportDownloader:
             logger.info('downloaded: {}'.format(url))
 
             # write pdf to local directory
+            # 'wb' stands for write binary
             with open(filepath, 'wb') as f:
                 f.write(r.content)
 
             # required delay, stated in the robots.txt
-            time.sleep(10)  # ten seconds
+            time.sleep(5)  # five seconds
 
     def create_output_paths(self):
         """ create a mapping a file paths for the report_names and
@@ -82,20 +83,23 @@ class AnnualReportDownloader:
         """
 
         output_paths = {}
-        for ind, (company, url) in enumerate(self.urls):
+        for ind, url in enumerate(self.urls):
             # parse the year from the annual report report_name
             year = url.split('_')[-1].split('.')[0]
 
             # The first annual report on a page is stored in different html
             # and does not have the year in the report name
             # e.g. ('Click/[#]') instead of ('NYSE_ORCL_2015.pdf')
-            # add one to the year of the last annual report to get the correct year
+            # add a condition to identify the url with index 0 and
+            # add one to the year of the next annual report (2nd most recent year)
+            # you will need to convert a string to an int for the addition
             if ind == 0:
-                year = str(int(self.urls[1][1].split('_')[-1].split('.')[0])+1)
+                previous_year = self.urls[1].split('_')[-1].split('.')[0]
+                year = str(int(previous_year) + 1)
 
             # create a file path to identify how to name a file
             # and where to store it locally
-            filename = '{}_annual_report_{}.pdf'.format(company, year)
+            filename = '{}_annual_report_{}.pdf'.format(self.company, year)
             filepath = os.path.join(OUTPUT_DIR_PATH, filename)
             output_paths[url] = filepath
 
