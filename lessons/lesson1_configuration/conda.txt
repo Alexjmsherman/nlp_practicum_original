@@ -10,15 +10,21 @@ conda env list
 
 # create an environment with Python 3.6 and all anaconda packages
 conda create --name mlguild python=3.6 anaconda
+# if you run into errors (for instance downloading a dll file)
+# run: conda clean --all --yes
 
 # add condo-forge to provide ease of access to install python packages
 conda config --add channels conda-forge
 
 # add new kernel to jupyer notebook to access kernel
 # http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments
+# https://stackoverflow.com/questions/37433363/link-conda-environment-with-jupyter-notebook
 source activate myenv
+conda install nb_conda
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
-
+# check import sys
+# sys.executable
+# else try: conda install ipykernel --name Python3
 
 ### RESOURCES:
 # conda vs pip vs virtualenv

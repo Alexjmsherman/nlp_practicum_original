@@ -25,6 +25,9 @@ Lesson 4: Text Extraction
 Lesson 5: Databases
 - update db homework
 
+Text Vectorization
+-create homework
+
 Lesson 7: Text Preprocessing
 SpaCy installation:
     conda install -c conda-forge spacy
@@ -38,10 +41,6 @@ Create guide to hw loe
 4. text extraction - high
 
 
-Text Vectorization
--create sparse matrix image
--add image of log
--add exercise at end
 
 NLP
 -create nltk installation instructions
