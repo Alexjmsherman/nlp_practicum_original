@@ -39,9 +39,13 @@ class Sections(Base):
     section_id = Column(Integer(), primary_key=True)
     filename = Column(Text())
     section_name = Column(Text())
-    criteria = Column(Text())
     section_text = Column(Text())
+    criteria = Column(Text())
     section_length = Column(Integer())
+
+    def __repr__(self):
+        return '<Sections section_id: {} | section_name: {}>'.format(
+            self.section_id, self.section_name)
 
 
 if __name__ == "__main__":
