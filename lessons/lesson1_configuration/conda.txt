@@ -22,7 +22,7 @@ conda config --add channels conda-forge
 source activate myenv
 conda install nb_conda
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
-# check import sys
+# import sys
 # sys.executable
 # else try: conda install ipykernel --name Python3
 
