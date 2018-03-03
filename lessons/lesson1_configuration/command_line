@@ -1,47 +1,50 @@
 Command Line Lesson plan:
-
 Commands Reference: https://www.git-tower.com/blog/posts/command-line-cheat-sheet
 
 1. navigate directories
-pwd
-cd
-ls
+pwd print working directory
+cd - change directory
+ls - list files and directories
 
 2. Clone GitHub Account
-git clone url
+git clone url - copy the files of a git repo locally
 
 3. Exercise: Navigate through directories
 
 4. Create Files and Directories
-touch
-mkdir
+touch - create a file
+mkdir - create a directory
 
 5. Remove Files/Directories
-rm
+rm - remove a file or directory
 
 6. Copy/Move files
-cp
-mv
+cp - copy a file
+mv - move a file
 
 7. Observe Files
-head
-tail
-cat
-less
+head - view the first rows of a file
+tail - view the last rows of a file
+cat - view the entire file all at once
+less - view the files by scrolling through it
 
 8. Find Files
-find
+find - find a file
 
 9. Grep Files
-grep
+grep - find a pattern in a file
 
-10. Permissions
+10. Pipes
+| - combine (chain) commands
+
+11. Command Substitution
+$() - use the result of a command as a variable
+
+12. Permissions
 chmod
 -https://help.ubuntu.com/community/FilePermissions
 -chmod permission number explanations: https://www.linux.org/threads/file-permissions-chmod.4124/
 
-11. Pipes
-|
 
 -----------------------------------------
 TEXT EDITOR: vim
@@ -55,6 +58,6 @@ i
 
 3. Exit vim
 press Esc
-press Shift+:
+press Shift and :
 :q!  -to quit without saving
 :wq  -to quit and save

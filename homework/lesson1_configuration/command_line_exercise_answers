@@ -7,27 +7,25 @@ PLEASE INCLUDE BOTH THE ANSWER AND THE COMMAND LINE COMMAND YOU USED TO GET THE 
 
 #####
 
-
-
 1. cd in to the configuration_files directory ( ml_guild/raw_data/configuration_files )
 
 
-
-2. How many aws_config_files directories are there?
+2. How many aws_config_files directories are there (e.g. aws_config_files_1)?
 There are 5 aws_config_files
 
 
+3. In which directory is config42.ini?
+aws_config_files_4
 
-3. In which directory is config47.ini?
-aws_config_files_2
-find . -name '*47*'
-
+# option 1 - search for the full file name
+find . -name 'config42.ini'
+# option 2 - search for the a subset of the file name
+find . -name '*42*'
 
 
 4. Use a find, a pipe, and wc to count how many config files exist in aws_config_files_3.
 19
 find aws_config_files_3 -name '*ini' | wc -l
-
 
 
 5. What is the output region specified in config33.ini
@@ -41,7 +39,6 @@ cd aws_config_files_5
 cat config33.ini
 
 
-
 6. Use grep to search which file contains the term 'exercise_answer' and provide the answer/
 aws_config_files_4/config42.ini
 42
@@ -50,3 +47,6 @@ aws_config_files_4/config42.ini
 grep -rl 'exercise_answer' .
 # view the file to find the answer
  cat aws_config_files_4/config42.ini
+
+
+7. BONUS use $() to move all of the .ini files into new directory called all_ini
