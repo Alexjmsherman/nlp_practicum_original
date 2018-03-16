@@ -1,13 +1,12 @@
 Command Line Lesson plan:
 Commands Reference: https://www.git-tower.com/blog/posts/command-line-cheat-sheet
 
-1. navigate directories
-pwd print working directory
-cd - change directory
+1. Indentify directory and files
+pwd - print working directory
 ls - list files and directories
 
-2. Clone GitHub Account
-git clone url - copy the files of a git repo locally
+2. navigate directories
+cd - change directory
 
 3. Exercise: Navigate through directories
 
@@ -61,3 +60,14 @@ press Esc
 press Shift and :
 :q!  -to quit without saving
 :wq  -to quit and save
+
+-----------------------------------------
+GITHUB
+
+1. Clone GitHub Account
+git clone url - copy the files of a git repo locally
+e.g. git clone https://github.com/Alexjmsherman/nlp_practicum_cohort1
+
+2. Connect to remote repository
+git remote add upstream url
+e.g. git remote add upstream https://github.com/Alexjmsherman/nlp_practicum_cohort1.git

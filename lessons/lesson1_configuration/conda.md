@@ -7,15 +7,17 @@ conda env list
 
 
 # 2. INSTALLATION
+# create an environment with Python 3.6 and all anaconda packages
+conda create --name guild python=3.6 anaconda -y
+
 # create a basic conda environment
 conda create --name guild
 
-# create an environment with Python 3.6 and all anaconda packages
-conda create --name guild python=3.6 anaconda
-
 # 2a. RESOLVE ERRORS
-# if you run into errors (for instance downloading a .dll file)
-# run: conda clean --all --yes
+# run the below code, if you run into errors, such as
+# 1. error downloading a .dll file
+# 2. CondaError: PermissionError(13, 'Permission denied')
+conda clean --all --yes
 
 
 # 3. INSTALL PACKAGES SETUP
