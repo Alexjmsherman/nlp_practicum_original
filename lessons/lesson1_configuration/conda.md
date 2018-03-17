@@ -3,9 +3,10 @@
 
 ![conda logo](https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png)
 
-![conda environments](https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png)
+![conda environments](../../raw_data/images/conda_envs.png)
+![conda environments](../../raw_data/images/conda_envs.png =250x)
 
-![conda packages](https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_packages.jpg =450x)
+![conda packages](https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_packages.jpg)
 
 
 "Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.
