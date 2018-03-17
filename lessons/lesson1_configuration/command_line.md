@@ -127,7 +127,7 @@
       chmod 
       
       https://www.linux.org/threads/file-permissions-chmod.4124/
-        https://help.ubuntu.com/community/FilePermissions
+      https://help.ubuntu.com/community/FilePermissions
 
 -----------------------------------------
 ## TEXT EDITOR: VIM
