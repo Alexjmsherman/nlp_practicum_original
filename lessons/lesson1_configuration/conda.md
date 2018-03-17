@@ -7,9 +7,9 @@
 
 conda create --name guild
 
-**create an environment with Python 3.6 and all anaconda packages**
+	**create an environment with Python 3.6 and all anaconda packages**
 
-conda create --name guild python=3.6 anaconda -y
+	conda create --name guild python=3.6 anaconda -y
 
 #### RESOLVE ERRORS
 **run the below code, if you run into errors, such as**
@@ -34,9 +34,9 @@ conda config --add channels conda-forge
 https://stackoverflow.com/questions/37433363/link-conda-environment-with-jupyter-notebook
 
 Type the following commands:
-- source activate guild
-- conda install nb_conda
-- python -m ipykernel install --user --name myenv --display-name "guild environment"
+	- source activate guild
+	- conda install nb_conda
+	- python -m ipykernel install --user --name myenv --display-name "guild environment"
 
 #### RESOLVE ERRORS
 **identify which python version is running in Jupyter notebook**
