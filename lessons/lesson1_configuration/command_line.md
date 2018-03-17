@@ -157,6 +157,14 @@ To quit and save (write), type:
 
 **Clone GitHub Account**
       
+   Set up Git username and email
+
+    git config --global user.name ‘John Doe’
+    
+    git config --global user.email ‘johndoe@example.com’
+    
+    git config --global core.editor ’C:\Program Files\Sublime Text 3\subl.exe’
+
    copy the files of a git repo locally
     
     git clone [url]
