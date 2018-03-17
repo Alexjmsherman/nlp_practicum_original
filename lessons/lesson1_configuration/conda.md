@@ -45,11 +45,11 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 Type the following commands:
 
-		source activate guild
+	source activate guild
 		
-		conda install nb_conda
+	conda install nb_conda
 		
-		python -m ipykernel install --user --name myenv --display-name "guild environment"
+	python -m ipykernel install --user --name myenv --display-name "guild environment"
 
 #### RESOLVE ERRORS
 **identify which python version is running in Jupyter notebook**
