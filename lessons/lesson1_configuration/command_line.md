@@ -1,4 +1,5 @@
 
+
 ## Command Line:
       Reference: https://www.git-tower.com/blog/posts/command-line-cheat-sheet
 
@@ -6,39 +7,41 @@
 
 - print working directory
 
-      pwd 
-      
+      pwd
+
  - list files and directories
 
-      ls
-
+       ls
+      
 **Navigate directories**
  - change directory
 
-      cd [path]
+       cd [path]
 
-      cd Desktop
+       cd Desktop
 
 
 **Create Files and Directories**
  - create a directory
 
-      mkdir
+       mkdir
        
-      mkdir test
+       mkdir test
 
  - create a file
               
-      touch
+       touch
 
-      touch new.txt
+       touch new.txt
 
 **Copy/Move files**
  - copy a file
 
-      cp
+       cp
 
-      cp  new.txt new1.txt
+       cp  new.txt new1.txt
+
+
 - move or rename a file
 
       mv
