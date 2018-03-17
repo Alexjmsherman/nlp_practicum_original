@@ -64,23 +64,24 @@
 **Find Files**
  - find a file
 
-      find
+       find
 
-      find . -name 'pattern'
+       find . -name 'pattern'
+  
   - find  a file using a regex pattern (* = match any character multiple times) to match all csv files
           
-      find . -name '*csv'
+        find . -name '*csv'
   
   - find  a file using a regex pattern (? = match any single character) to match all csv or tsv files
 
-      find . -name '*.?sv'
+        find . -name '*.?sv'
 
 **Grep Files**
  - find a pattern in a file
 
-      grep
+       grep
 
-      grep 'pattern' filename
+       grep 'pattern' filename
 
 - recursively look for the pattern across files
 
@@ -91,16 +92,16 @@
     
   - export       
    
-      >
+        >
 
-      find . -name '*.csv' > output.txt
+        find . -name '*.csv' > output.txt
 
 **Command Substitution**
  - use the result of a command as a variable
 
-      $()
+       $()
 
-      cp $(find . -name '*.csv')
+       cp $(find . -name '*.csv')
 
 **Pipes**
  
@@ -113,10 +114,10 @@
 **Remove Files/Directories**
  - remove a file or directory
 
-      rm
+       rm
 
-      rm new.txt
-      rm -r test
+       rm new.txt
+       rm -r test
 
 **Permissions**
        
@@ -133,23 +134,23 @@
 
 **Open text editor**
       
-      vim
+    vim
 
 Insert mode (to add new text)
           
-      i
+    i
 
 Exit vim
 
-      press Esc
-      press Shift and colon
+    press Esc
+    press Shift and colon
 
 To quit without saving, type:
 
-      q!
+    q!
 To quit and save (write), type:
 
-      wq
+    wq
 
 -----------------------------------------
 ## GITHUB
