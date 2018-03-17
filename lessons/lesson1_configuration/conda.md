@@ -1,17 +1,14 @@
 ﻿# conda cheat sheet
 - https://conda.io/docs/_downloads/conda-cheatsheet.pdf
 
-```mermaid
-graph LR
-A[conda clean --all --yes] --> B(conda create --name guild)
-B --> D[conda config --add channels conda-forge]
-```
 
 ### CONDA INSTALLATION
 **create a basic conda environment**
+
 conda create --name guild
 
 **create an environment with Python 3.6 and all anaconda packages**
+
 conda create --name guild python=3.6 anaconda -y
 
 #### RESOLVE ERRORS
@@ -23,16 +20,19 @@ conda clean --all --yes
 
 ### ENVIRONMENTS
 **list conda environments**
+
 conda env list
 
 ### INSTALL PACKAGES SETUP
 **add conda-forge to provide ease of access to install python packages**
+
 conda config --add channels conda-forge
 
 
 ### JUPYTER NOTEBOOK SETUP
 **add new kernel to jupyer notebook to access kernel**- http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments
 https://stackoverflow.com/questions/37433363/link-conda-environment-with-jupyter-notebook
+
 Type the following commands:
 - source activate guild
 - conda install nb_conda
