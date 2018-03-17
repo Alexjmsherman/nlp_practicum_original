@@ -10,35 +10,35 @@
       
  - list files and directories
 
-       ls
+      ls
 
 **Navigate directories**
  - change directory
 
-         cd [path]
+      cd [path]
 
-         cd Desktop
+      cd Desktop
 
 
 **Create Files and Directories**
  - create a directory
 
-       mkdir
+      mkdir
        
-       mkdir test
+      mkdir test
 
  - create a file
               
-       touch
+      touch
 
-         touch new.txt
+      touch new.txt
 
 **Copy/Move files**
  - copy a file
 
-       cp
+      cp
 
-       cp  new.txt new1.txt
+      cp  new.txt new1.txt
 - move or rename a file
 
       mv
@@ -47,13 +47,13 @@
 **Observe files**
 - view the first rows of a file
 
-        head
+      head
 - view the last rows of a file
 
       tail 
 - view the entire file all at once
 
-       cat
+      cat
 - view the files by scrolling through it
 
       less
@@ -61,43 +61,43 @@
 **Find Files**
  - find a file
 
-       find
+      find
 
-       find . -name 'pattern'
+      find . -name 'pattern'
   - find  a file using a regex pattern (* = match any character multiple times) to match all csv files
           
-        find . -name '*csv'
+      find . -name '*csv'
   
   - find  a file using a regex pattern (? = match any single character) to match all csv or tsv files
 
-        find . -name '*.?sv'
+      find . -name '*.?sv'
 
 **Grep Files**
  - find a pattern in a file
 
-       grep
+      grep
 
-         grep 'pattern' filename
+      grep 'pattern' filename
 
 - recursively look for the pattern across files
 
-       grep -r 'pattern'
+      grep -r 'pattern'
 
 
 **Write output to file **
     
   - export       
    
-        >
+      >
 
-          find . -name '*.csv' > output.txt
+      find . -name '*.csv' > output.txt
 
 **Command Substitution**
  - use the result of a command as a variable
 
-       $()
+      $()
 
-         cp $(find . -name '*.csv')
+      cp $(find . -name '*.csv')
 
 **Pipes**
  
@@ -110,10 +110,10 @@
 **Remove Files/Directories**
  - remove a file or directory
 
-       rm
+      rm
 
-       rm new.txt
-       rm -r test
+      rm new.txt
+      rm -r test
 
 **Permissions**
        
