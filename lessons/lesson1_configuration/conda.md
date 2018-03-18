@@ -32,14 +32,14 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 	conda env list
 
-	<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="250" height="200" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="250" height="200" />
 
 ### INSTALL PACKAGES SETUP
 **add conda-forge to provide ease of access to install python packages**
 
 	conda config --add channels conda-forge
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_packages.jpg" alt="conda_logo" width="250" height="200" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_packages.jpg" alt="conda_logo" width="300" height="300" />
 
 
 ### JUPYTER NOTEBOOK SETUP
