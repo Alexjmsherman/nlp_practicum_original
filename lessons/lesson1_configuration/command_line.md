@@ -101,7 +101,7 @@
 
        $()
 
-       cp $(find . -name '*.csv')
+       cp $(find . -name '*.csv') .
 
 **Pipes**
  

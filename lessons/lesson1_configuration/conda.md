@@ -37,9 +37,6 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 	conda config --add channels conda-forge
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_packages.jpg" alt="conda_logo" width="300" height="300" />
-
-
 ### JUPYTER NOTEBOOK SETUP
 **add new kernel to jupyer notebook to access kernel**
 
@@ -66,7 +63,7 @@ Type the following commands:
 	conda install ipykernel --name Python3
 
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_stack.png" alt="conda_logo" width="250" height="200" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_stack.png" alt="conda_logo" width="300" height="250" />
 
 
 ### RESOURCES:
