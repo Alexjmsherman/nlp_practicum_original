@@ -1,5 +1,5 @@
 ﻿
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png" alt="conda_logo" width="200px" height="50" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png" alt="conda_logo" width="60px" height="30" />
 
 # conda 
 
