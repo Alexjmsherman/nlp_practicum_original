@@ -1,5 +1,5 @@
 ﻿
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png" alt="conda_logo" width="350px" height="200" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png" alt="conda_logo" width="350px" height="50" />
 
 # conda 
 
@@ -32,7 +32,7 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 	conda env list
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="450" height="400" />
+<center><img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="250" height="200" /></center>
 
 ### INSTALL PACKAGES SETUP
 **add conda-forge to provide ease of access to install python packages**
@@ -68,7 +68,7 @@ Type the following commands:
 	conda install ipykernel --name Python3
 
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_stack.png" alt="conda_logo" width="450" height="400" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_stack.png" alt="conda_logo" width="350" height="300" />
 
 
 ### RESOURCES:
