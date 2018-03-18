@@ -1,8 +1,6 @@
 ﻿
 <img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_logo.png" alt="conda_logo" width="60px" height="30" />
 
-# conda 
-
 
 "Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.
 
@@ -32,7 +30,7 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 	conda env list
 
-<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="250" height="200" />
+<img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="200" height="200" />
 
 ### INSTALL PACKAGES SETUP
 **add conda-forge to provide ease of access to install python packages**
