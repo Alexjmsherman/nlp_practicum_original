@@ -39,7 +39,8 @@ class Document:
         self.last_printed = None
         self.revision = None
         self.num_tables = None
-        self.path = os.path.join(COMPLETED_PATH, path)
+        self.path = os.path.join(IN_PROGRESS_PATH, path)
+        self.completed_path = os.path.join(COMPLETED_PATH, path)
 
         self.sections = []  # container for section objects
 

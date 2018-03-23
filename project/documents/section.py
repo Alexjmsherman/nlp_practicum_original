@@ -1,15 +1,16 @@
-from project.documents import section_criteria
+from project.documents.section_criteria import heading, capitalization, style, \
+    capital_letter_list, roman_numeral_list, ignore_bullets
 
 
 class Section:
     """ Validate and collect the text for a section """
     def __init__(self, section_name='', section_criteria=[
-                  section_criteria.heading
-                , section_criteria.capitalization
-                , section_criteria.style
-                , section_criteria.capital_letter_list
-                , section_criteria.roman_numeral_list
-                , section_criteria.ignore_bullets
+                  heading
+                , capitalization
+                , style
+                , capital_letter_list
+                , roman_numeral_list
+                , ignore_bullets
         ]):
         """
         :param section_name: Name of the section. Empty default for the first section
