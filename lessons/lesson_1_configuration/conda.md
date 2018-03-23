@@ -12,9 +12,25 @@ Conda as a package manager helps you find and install packages. If you need a pa
 
 
 ### CONDA INSTALLATION
+**Confirm that a Python environment variable is set**
+
+	python -i
+	conda
+
+**add conda-forge to provide ease of access to install python packages**
+
+	conda config --add channels conda-forge
+
 **create a basic conda environment**
 
 	conda create --name guild
+
+**create a conda environment with specific packages from a requirements.txt**
+
+	conda create --name guild --file requirements.txt
+
+	# code if you want to create a requirements.txt
+	conda list -e > requirements.txt
 
 **create an environment with Python 3.6 and all anaconda packages**
 
@@ -30,12 +46,12 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 	conda env list
 
+**Remove an environment and everything in it**
+
+	conda env remove --name
+
 <img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="200" height="200" />
 
-### INSTALL PACKAGES SETUP
-**add conda-forge to provide ease of access to install python packages**
-
-	conda config --add channels conda-forge
 
 ### JUPYTER NOTEBOOK SETUP
 **add new kernel to jupyer notebook to access kernel**
@@ -51,11 +67,12 @@ Type the following commands:
 		
 	conda install nb_conda
 		
-	python -m ipykernel install --user --name myenv --display-name "guild environment"
+	python -m ipykernel install --user --name guild --display-name "guild environment"
 
 #### RESOLVE ERRORS
 **identify which python version is running in Jupyter notebook**
 
+	python -i
 	import sys
 	sys.executable
 
@@ -69,7 +86,7 @@ Type the following commands:
 ### RESOURCES:
 conda vs pip vs virtualenv
 
-	https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+	http://devopspy.com/python/conda-vs-pip/
 
 Video: Managing python environments with conda
 
