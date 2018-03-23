@@ -9,3 +9,7 @@ The NLP Practicum includes a series of lessons discussing NLP using the Python d
 The following people have been core contributors to the NLP Practicum development and maintenance:
 
   * Alex Sherman (alsherman@deloitte.com) 
+  * Jason Light (jaslight@deloitte.com)
+  * Craig Tapper (ctapper@deloitte.com)
+  * Gregory Gooden (ggooden@deloitte.com)
+  * Alex Ji (alexji@deloitte.com)
