@@ -14,7 +14,11 @@ Conda as a package manager helps you find and install packages. If you need a pa
 ### CONDA INSTALLATION
 **Confirm that a Python environment variable is set**
 
+	# start python
 	python -i
+	# exit python
+	exit()
+	# check if conda is installed (from git bash, not python)
 	conda
 
 **add conda-forge to provide ease of access to install python packages**
@@ -48,7 +52,11 @@ If you run into errors, such as an error downloading a .dll file or CondaError: 
 
 **Remove an environment and everything in it**
 
-	conda env remove --name
+	conda env remove --name [environment_name]
+	# e.g. create a test env
+	conda create --name test
+	# remove the test env
+	conda env remove --name test
 
 <img src="https://github.com/Alexjmsherman/ml_guild/blob/master/raw_data/images/conda_envs.png" alt="conda_logo" width="200" height="200" />
 
@@ -72,9 +80,14 @@ Type the following commands:
 #### RESOLVE ERRORS
 **identify which python version is running in Jupyter notebook**
 
+	# start python
 	python -i
+	# import the system package
 	import sys
+	# check which version of python is running
 	sys.executable
+	# exit python
+	exit()
 
 ##### if it is the correct python version, try the following
 	conda install ipykernel --name Python3
