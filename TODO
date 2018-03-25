@@ -1,14 +1,9 @@
 Reference images for slides: https://aws.amazon.com/config/
 
 Lesson 1: Config
--create instructions to install and set up Git Bash, create a git account
-Username: https://help.github.com/articles/setting-your-username-in-git/
-Email: https://help.github.com/articles/setting-your-commit-email-address-in-git/
 -convert command line txt into GitHub README
--create video of homework answers
 -Add configuration file to project and lessons
--Add explanation of ExtendedInterpolation (used in SQLAlchemy hw)
-
+-provide overview and objectives of lesson at top of notebook
 
 Lesson 2: Automation
 -create image of automation process
@@ -16,6 +11,10 @@ Lesson 2: Automation
 -Slide of request, html, extract tag, store in list, iterate through, download, store locally
 -remove deloitte scrape example as it is not allowed by robots.txt
 -add method to check if 10k has already been downloaded (no not d/l again)
+
+
+Lesson 3: Refactoring
+-create homework
 
 Lesson 4: Text Extraction
 -change oracle.zip at end of notebook to Southwest
@@ -25,14 +24,23 @@ Lesson 4: Text Extraction
 Lesson 5: Databases
 - update db homework
 
-Text Vectorization
+Lesson 6: Text Vectorization
 -create homework
+-create image for class overview
+-write class overview
 
 Lesson 7: Text Preprocessing
 SpaCy installation:
     conda install -c conda-forge spacy
     Download Microsoft Visual C++: http://landinghub.visualstudio.com/visual-cpp-build-tools
     python -m spacy download en_core_web_lg
+
+
+similarity
+https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.akbarian.org%2Fnotes%2Fimg%2Fvsm.png&imgrefurl=http%3A%2F%2Fwww.akbarian.org%2Fnotes%2Ftext-mining-nlp-python%2F&docid=G0C7K7jB-9HieM&tbnid=6cR4eQn778F2hM%3A&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw..i&w=903&h=588&bih=560&biw=1266&q=text%20vectorization&ved=0ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw&iact=mrc&uact=8#h=588&imgdii=6cR4eQn778F2hM:&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw..i&w=903
+https://www.google.com/imgres?imgurl=https%3A%2F%2Fs3-ap-south-1.amazonaws.com%2Fav-blog-media%2Fwp-content%2Fuploads%2F2017%2F06%2F04164920%2Fcount-vector.png&imgrefurl=https%3A%2F%2Fwww.analyticsvidhya.com%2Fblog%2F2017%2F06%2Fword-embeddings-count-word2veec%2F&docid=bS1IQyHy6PntZM&tbnid=i30PbQ2hemPy0M%3A&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhSKBMwEw..i&w=372&h=276&bih=560&biw=1266&q=text%20vectorization&ved=0ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhSKBMwEw&iact=mrc&uact=8
+- add word movers distnace
+- add word2vec
 
 Create guide to hw loe
 1 configuration - low
@@ -52,3 +60,12 @@ Logging
 -16.6.7. LogRecord attributes
   -https://docs.python.org/3/library/logging.html#logrecord-attributes
 
+IDEAS:
+- OCR
+- pipelines, custom transformers
+- Word2Vec for word similarity (e.g. AirBnB words similar to 'walking' to infer close by areas of interest)
+
+TODO:
+- talk to hyemi about skype meeting for large groups
+- ask group to create about-me slides
+- get credit for course / charge code discussion
