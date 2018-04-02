@@ -1,13 +1,15 @@
 import os
-from project.documents.document import Document
-from configparser import ConfigParser, ExtendedInterpolation
 import logging
 from logging.config import fileConfig
+from configparser import ConfigParser, ExtendedInterpolation
+from project.documents.document import Document
 
+# configuration
 config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('../config.ini')
 IN_PROGRESS_PATH = config['DOCX']['IN_PROGRESS_PATH']
 
+# logging configuration
 fileConfig('logging_config.ini', disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 

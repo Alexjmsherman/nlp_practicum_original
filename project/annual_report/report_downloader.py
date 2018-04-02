@@ -30,13 +30,12 @@ class AnnualReportDownloader:
         :return urls: list of urls for the annual report pdfs for the company
         """
 
-        # find all links on page
+        # find all links to annual reports on the webpage
         company_url = r'{}/Company/{}'.format(self.base_url, self.company)
         r = requests.get(company_url)
         b = BeautifulSoup(r.text, 'lxml')
         annual_reports = b.find_all('ul', attrs={'class':'links'})
 
-        urls = []
         for report in annual_reports:
             try:
                 # create the report_url to download the pdf
@@ -58,7 +57,9 @@ class AnnualReportDownloader:
             filename = filepath.split('\\')[-1]
 
             # skip files that have already been downloaded
+
             if filename in os.listdir(OUTPUT_DIR_PATH):
+                logger.info('file already downloaded: {}'.format(url))
                 continue
 
             # download pdf

@@ -3,10 +3,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from configparser import ConfigParser, ExtendedInterpolation
 
-config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('../config.ini')
-PROJECT_DB_PATH = config['DATABASES']['PROJECT_DB_PATH']
-
 
 # inherit the functionality to create a database
 Base = declarative_base()
@@ -16,10 +12,8 @@ class Documents(Base):
     # provide a name used in SQL to query the table
     __tablename__ = 'DOCUMENTS'
 
-    # provide column names and data types
-    # for each field in the database
-    # additional paramater are available for the columns
-    # and data types
+    # provide column names and data types for each field in the database
+    # additional parameters are available for the columns and data types
     document_id = Column(Integer(), primary_key=True)
     path = Column(Text())
     filename = Column(Text())
@@ -49,8 +43,18 @@ class Sections(Base):
 
 
 if __name__ == "__main__":
+    # config path when creating database
+    config = ConfigParser(interpolation=ExtendedInterpolation())
+    config.read('../../config.ini')
+    PROJECT_DB_PATH = config['DATABASES']['PROJECT_DB_PATH']
+
     # instantiate the database connection
     engine = create_engine(PROJECT_DB_PATH)
 
     # create the tables in the database
     Base.metadata.create_all(engine)
+else:
+    # config path when connecting to database from main
+    config = ConfigParser(interpolation=ExtendedInterpolation())
+    config.read('../config.ini')
+    PROJECT_DB_PATH = config['DATABASES']['PROJECT_DB_PATH']

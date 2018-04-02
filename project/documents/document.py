@@ -3,6 +3,7 @@ import docx
 from project.documents.section import Section
 from configparser import ConfigParser, ExtendedInterpolation
 
+# configuration
 config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('../config.ini')
 IN_PROGRESS_PATH = config['DOCX']['IN_PROGRESS_PATH']
