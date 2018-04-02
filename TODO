@@ -1,28 +1,23 @@
 Reference images for slides: https://aws.amazon.com/config/
 
 Lesson 1: Config
--convert command line txt into GitHub README
 -Add configuration file to project and lessons
--provide overview and objectives of lesson at top of notebook
 
 Lesson 2: Automation
--create image of automation process
--Slide of libraries, patterns, syntax
--Slide of request, html, extract tag, store in list, iterate through, download, store locally
--remove deloitte scrape example as it is not allowed by robots.txt
+-installation instructions for lxml
 -add method to check if 10k has already been downloaded (no not d/l again)
 
-
-Lesson 3: Refactoring
--create homework
+Lesson 3: Databases
+- update db homework
 
 Lesson 4: Text Extraction
 -change oracle.zip at end of notebook to Southwest
 -add logging
 -add multiprocessing to document extractor
 
-Lesson 5: Databases
-- update db homework
+Lesson 5: Refactoring
+-create homework
+-pycharm installation instuctions
 
 Lesson 6: Text Vectorization
 -create homework
