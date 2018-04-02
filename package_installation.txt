@@ -1,0 +1,4 @@
+Lesson 4: Text extraction
+# pdfminer.six
+conda install -c conda-forge pdfminer.six
+ 
