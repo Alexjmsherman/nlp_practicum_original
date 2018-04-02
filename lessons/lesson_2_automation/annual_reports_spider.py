@@ -3,7 +3,7 @@ import scrapy
 class AnnualReportsSpider(scrapy.Spider):
     name = "annual_reports"
     # create a list of all the pages with alphabetical company names
-    start_urls = ['http://www.annualreports.com/Companies?a={}'.format(letter) for letter in ['A','B']]
+    start_urls = ['http://www.annualreports.com/Companies?a={}'.format(letter) for letter in ['A']]
 
     def parse(self, response):
     	# get the url of the company specific webpage
