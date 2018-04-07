@@ -5,6 +5,8 @@ Lesson 1: Config
 
 Lesson 2: Automation
 -installation instructions for lxml
+- conda install -c anaconda lxml
+- in the homework (last exercise #4) add lines to check if file is already downloaded. Code already exists in the refactoring lesson
 -add method to check if 10k has already been downloaded (no not d/l again)
 
 Lesson 3: Databases
@@ -17,7 +19,11 @@ Lesson 4: Text Extraction
 
 Lesson 5: Refactoring
 -create homework
+-add check in database if file is downloaded
 -pycharm installation instuctions
+-https://stackoverflow.com/questions/33782984/reading-data-from-s3-using-lambda
+-https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html
+-http://boto3.readthedocs.io/en/latest/guide/migrations3.html
 
 Lesson 6: Text Vectorization
 -create homework
