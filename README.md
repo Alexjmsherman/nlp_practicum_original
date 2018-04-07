@@ -7,30 +7,30 @@
 
 ### 2. Automation
 *  Topics: automate the process to collect data from https://www.annualreports.com
-*  Technology: requests, Jupyter Notebooks, BeautifulSoup
+*  Technology: requests, Jupyter Notebooks, BeautifulSoup, Scrapy
 *  Homework: automate the process to identify and download company 10-K annual reports
 
-### 3. Text Extraction
-*  Topics: use docx to extract text from Microsoft Word Documents. Discuss PyCharm debugger.
-*  Technology: docx, PyCharm IDE
+### 3. Databases
+*  Topics: use sqlalchemy to create and populate a database, locally and on AWS
+*  Technology: sqlalchemy, sqllite, AWS RDS (MySQL)
+*  Homework: create and populate a database with sqlalchemy
+
+### 4. Text Extraction
+*  Topics: use docx to extract text from Microsoft Word Documents. Discuss the PyCharm debugger.
+*  Technology: docx, pdfminer.six, subprocess, PyCharm
 *  Homework: structure the annual reports into sections
 
-### 4. Databases
-*  Topics: use sqlalchemy to create and populate a database
-*  Technology: sqlalchemy, sqllite
-*  Homework: create and populate a sqlalchemy database
-
 ### 5. Refactoring
-*  Topics: review and refactor homework, discussing advanced Python syntax and set up python project structure
-*  Technology: python, \__init_\_.py, Spyder IDE
+*  Topics: refactor the automation homework, use task scheduler to automate the script locally, discuss AWS technologies to automate the script in the cloud 
+*  Technology: python, \__init_\_.py, Spyder, AWS S3, AWS Lambda, AWS RDS, AWS CloudWatch
 
 ### 6. Text Preprocessing
-*  Topics: lemmatization, phrase_models, POS tagging, Rule-based matching
-*  Technology: SpaCy, gensim
+*  Topics: lemmatization, POS tagging, Rule-based matching
+*  Technology: SpaCy
 
 ### 7. Phrase (collocation) Detection
 *  Topics: acronyms, POS phrases, phrase dectection
-*  Technology: SpaCy
+*  Technology: SpaCy, gensim
 
 ### 8. Text Vectorization
 *  Topics: vector space model, TFIDF, BM25
@@ -38,8 +38,8 @@
 *  Homework: clean text from annual reports
 
 ### 9. Object Oriented Python
-*  Topics: reconstruct scikit-learn's CountVectorizer
-*  Technology: object oriented Python
+*  Topics: reconstruct scikit-learn's CountVectorizer codebase
+*  Technology: scikit-learn, object oriented Python
 
 ### 10. Unsupervised ML (Topic Models)
 *  Topics: discuss latent semantic indexing (LSI), latent dirichlet allocation(LDA), and topic coherence metrics
