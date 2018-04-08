@@ -10,3 +10,6 @@ http://blog.christianperone.com/2013/09/machine-learning-cosine-similarity-for-v
 
 Normalization (Unit Norm):
 https://processing.org/tutorials/pvector/
+
+Text Vectorization:
+https://nlp.stanford.edu/manning/talks/Simons-Institute-Manning-2017.pdf
