@@ -57,7 +57,6 @@ class AnnualReportDownloader:
             filename = filepath.split('\\')[-1]
 
             # skip files that have already been downloaded
-
             if filename in os.listdir(OUTPUT_DIR_PATH):
                 logger.info('file already downloaded: {}'.format(url))
                 continue

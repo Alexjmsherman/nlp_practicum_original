@@ -72,6 +72,6 @@ class Section:
         for criteria_callable in self.section_criteria_callables:
             if criteria_callable(p):
                 section_header = True
-                self.criteria = ', '.join(str(criteria_callable))
+                self.criteria = str(criteria_callable)
 
         return section_header
