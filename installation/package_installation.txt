@@ -1,5 +1,8 @@
 Lesson 3: SQLAlchemy
 - pip install mysqlclient
+- for mac you need to install mysql before installing mysqlclient
+    - brew install mysql
+
 
 Lesson 4: Text extraction
 # pdfminer.six
