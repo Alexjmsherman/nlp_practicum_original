@@ -32,8 +32,8 @@
 *  Topics: acronyms, POS phrases, phrase dectection
 *  Technology: SpaCy, gensim
 
-### 8. Text Vectorization
-*  Topics: vector space model, TFIDF, BM25
+### 8. Text Vectorization (count-based methods)
+*  Topics: vector space model, TFIDF, BM25, Co-occurance matrix
 *  Technology: scikit-learn
 *  Homework: clean text from annual reports
 
@@ -46,27 +46,27 @@
 *  Technology: gensim
 *  Homework: Create topic models for annual report sections
 
-### 11. Text Similarity
+### 11. Text Vectorization (predictive methods)
+*  Topics: word embeddings, Word2Vec
+*  Technology: scikit-learn
+
+### 12. Text Similarity
 *  Topics: cosine similarity, distance metrics, l1 and l2 norm
 *  Technology: SpaCy, gensim
 
-### 12. Unsupervised ML (Clustering)
+### 13. Unsupervised ML (Clustering)
 *  Topics: Discuss clustering algorithms in scikit-learn
 *  Technology: scikit-learn
 *  Homework: Cluster section names from annual reports
 
-### 13 Document Classification
+### 14. Document Classification
 *  Topics: tbd
 *  Technology: scikit-learn
 
-### 14 Pipelines and Custom Transformers
+### 15. Pipelines and Custom Transformers
 *  Topics: tbd
 *  Technology: tbd
 
-### 15 Logging and Executables
+### 16. Logging and Executables
 *  Topics: capture, format, and send logging messages to a variety of output. Exception Handling. Create an executable of a python package for deployment
 *  Technology: logging, python exceptions, pyinstaller, argparse
-
-### Bonus Material
-*  Topics: Discuss vendor partners
-*  Technology: AWS, GCP, Azure, Bluemix
