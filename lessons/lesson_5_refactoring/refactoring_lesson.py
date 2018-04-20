@@ -14,7 +14,7 @@ import configparser
 from configparser import ConfigParser, ExtendedInterpolation
 
 config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('config.ini')
+config.read('../../config.ini')
 OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
 BASE_URL = config['AUTOMATION']['BASE_URL']
 COMPANY = config['AUTOMATION']['COMPANY']
@@ -83,10 +83,18 @@ for ind, url in enumerate(urls):
 """
 
 for url in urls:
+    # get directory to store annual report
     filepath = output_paths[url]
-            
+    filename = filepath.split('\\')[-1]
+
+    # skip files that have already been downloaded
+    if filename in os.listdir(OUTPUT_DIR_PATH):
+        print('file already downloaded: {}'.format(url))
+        continue
+        
     # download pdf
     r = requests.get(url)
+    print('downloaded: {}'.format(url))
 
     # write pdf to local directory
     with open(filepath, 'wb') as f:

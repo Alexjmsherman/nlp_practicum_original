@@ -6,7 +6,8 @@ Goal: Refactor the data scraping homework solution.
       Convert the code into functions.
 
 """
-
+import boto3
+import json
 import os
 import requests
 import time
@@ -15,20 +16,17 @@ from configparser import ConfigParser, ExtendedInterpolation
 
 # configuration
 config = ConfigParser(interpolation=ExtendedInterpolation())
-config.read('../../config.ini')
-OUTPUT_DIR_PATH = config['AUTOMATION']['OUTPUT_DIR_PATH']
-BASE_URL = config['AUTOMATION']['BASE_URL']
-COMPANY = config['AUTOMATION']['COMPANY']
+config.read('config.ini')
+BUCKET_NAME = config['LAMBDA']['BUCKET_NAME']
+BASE_URL = config['LAMBDA']['BASE_URL']
+COMPANY = config['LAMBDA']['COMPANY']
 
 
-def main():
+def main(event, context):
     print('start annual reports for {}'.format(COMPANY))
     urls = get_company_annual_report_urls(COMPANY)
     output_paths = create_output_paths(urls, COMPANY)
     download_annual_reports(urls, output_paths)
-
-    # pause to keep command line open
-    time.sleep(5)
 
 
 def get_company_annual_report_urls(COMPANY):
@@ -43,7 +41,7 @@ def get_company_annual_report_urls(COMPANY):
 
     # find all links on page
     r = requests.get(company_url)
-    b = BeautifulSoup(r.text, 'lxml')
+    b = BeautifulSoup(r.text, 'html.parser')
     annual_reports = b.find_all('ul', attrs={'class':'links'})
 
     urls = []
@@ -72,6 +70,7 @@ def create_output_paths(urls, COMPANY):
 
     output_paths = {}
     for ind, url in enumerate(urls):
+        
         # parse the year from the annual report report_name
         year = url.split('_')[-1].split('.')[0]
 
@@ -86,10 +85,10 @@ def create_output_paths(urls, COMPANY):
         # create a file path to identify how to name a file
         # and where to store it locally
         filename = '{}_annual_report_{}.pdf'.format(COMPANY, year)
-        filepath = os.path.join(OUTPUT_DIR_PATH, filename)
-        output_paths[url] = filepath
+        output_paths[url] = filename
 
     return output_paths
+
 
 def download_annual_reports(urls, output_paths):
     """ Download all of the specified annual reports to a local directory
@@ -97,30 +96,43 @@ def download_annual_reports(urls, output_paths):
     :param urls: annual report urls
     :param output_paths: local directory file names to write annual reports
     """
+    
+    # S3 Connect to load new files
+    s3 = boto3.resource('s3')
+    bucket = s3.Bucket(BUCKET_NAME)
 
-    for url in urls:
-        # get directory to store annual report
-        filepath = output_paths[url]
-        filename = filepath.split('\\')[-1]
+    # access bucket resources to check for existing files
+    items = []
+    try:
+        for item in bucket.objects.all():
+            items.append(item.key)
+    except KeyError:
+        pass
+
+    for ind, url in enumerate(urls):
+        # break after 3 pdfs
+        if ind > 3:
+            break
         
-        # skip files that have already been downloaded
-        if filename in os.listdir(OUTPUT_DIR_PATH):
-            print('file already downloaded: {}'.format(url))
-            continue
+        # get directory to store annual report
+        filename = output_paths[url]
 
+        # ignore existing files
+        if filename in items:
+            print('file already downloaded: {}'.format(filename))
+            continue
+                
         # download pdf
         r = requests.get(url)
-        print('downloaded: {}'.format(url))
+        print('downloaded: {}'.format(filename))
 
-        # write pdf to local directory
-        with open(filepath, 'wb') as f:
-            f.write(r.content)
+        # write pdf to s3 bucket
+        bucket.put_object(Body=r.content, Bucket=BUCKET_NAME, Key=filename)
 
         # required delay, stated in the robots.txt
         time.sleep(5)  # five seconds
 
-
-if __name__ == "__main__": main()
+if __name__ == "__main__": main(event=None, context=None)
 
 
 
