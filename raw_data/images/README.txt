@@ -15,8 +15,9 @@ https://processing.org/tutorials/pvector/
 Text Vectorization:
 https://nlp.stanford.edu/manning/talks/Simons-Institute-Manning-2017.pdf
 
-Dimensionality Reduction:
+Word Embeddings:
 https://intoli.com/blog/pca-and-svd/
+ftp://ftp.sas.com/techsup/download/EMiner/TamingTextwiththeSVD.pdf
 
 Distance Metrics:
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fnickgrattan.files.wordpress.com%2F2014%2F06%2Fscreenhunter_76-jun-10-08-36.jpg%3Fw%3D700&imgrefurl=https%3A%2F%2Fnickgrattan.wordpress.com%2F2014%2F06%2F10%2Feuclidean-manhattan-and-cosine-distance-measures-in-c%2F&docid=im_eoRh1UsofcM&tbnid=uwQ0TA1bDVGOQM%3A&vet=10ahUKEwiOr6uusqvaAhWh4IMKHeZzAoIQMwg8KAIwAg..i&w=513&h=376&bih=676&biw=1600&q=euclidean%20distance%20text&ved=0ahUKEwiOr6uusqvaAhWh4IMKHeZzAoIQMwg8KAIwAg&iact=mrc&uact=8
