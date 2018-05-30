@@ -4,5 +4,6 @@ sudo yum update -y
 sudo yum groupinstall 'Development Tools' -y
 sudo easy_install pip
 sudo yum install python-devel -y
+sudo pip install gensim pandas
 sudo pip install spacy
 sudo python -m spacy download en_core_web_lg
