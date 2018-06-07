@@ -43,6 +43,9 @@ SpaCy installation:
     python -m spacy download en_core_web_lg
 
 
+Lesson 9: OOP
+-the function to count the word statistics counts the overall count of the tokens, not the count pepr document as CountVectorizer is supposed to do
+
 similarity
 https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.akbarian.org%2Fnotes%2Fimg%2Fvsm.png&imgrefurl=http%3A%2F%2Fwww.akbarian.org%2Fnotes%2Ftext-mining-nlp-python%2F&docid=G0C7K7jB-9HieM&tbnid=6cR4eQn778F2hM%3A&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw..i&w=903&h=588&bih=560&biw=1266&q=text%20vectorization&ved=0ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw&iact=mrc&uact=8#h=588&imgdii=6cR4eQn778F2hM:&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhKKAswCw..i&w=903
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fs3-ap-south-1.amazonaws.com%2Fav-blog-media%2Fwp-content%2Fuploads%2F2017%2F06%2F04164920%2Fcount-vector.png&imgrefurl=https%3A%2F%2Fwww.analyticsvidhya.com%2Fblog%2F2017%2F06%2Fword-embeddings-count-word2veec%2F&docid=bS1IQyHy6PntZM&tbnid=i30PbQ2hemPy0M%3A&vet=10ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhSKBMwEw..i&w=372&h=276&bih=560&biw=1266&q=text%20vectorization&ved=0ahUKEwjZhb_omtHZAhUQhuAKHcIECOcQMwhSKBMwEw&iact=mrc&uact=8
