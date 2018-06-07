@@ -14,10 +14,12 @@ https://processing.org/tutorials/pvector/
 
 Text Vectorization:
 https://nlp.stanford.edu/manning/talks/Simons-Institute-Manning-2017.pdf
+http://sebastianraschka.com/Articles/2014_scikit_dataprocessing.html
 
 Word Embeddings:
 https://intoli.com/blog/pca-and-svd/
 ftp://ftp.sas.com/techsup/download/EMiner/TamingTextwiththeSVD.pdf
+https://medium.com/scaleabout/a-gentle-introduction-to-doc2vec-db3e8c0cce5e
 
 Distance Metrics:
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fnickgrattan.files.wordpress.com%2F2014%2F06%2Fscreenhunter_76-jun-10-08-36.jpg%3Fw%3D700&imgrefurl=https%3A%2F%2Fnickgrattan.wordpress.com%2F2014%2F06%2F10%2Feuclidean-manhattan-and-cosine-distance-measures-in-c%2F&docid=im_eoRh1UsofcM&tbnid=uwQ0TA1bDVGOQM%3A&vet=10ahUKEwiOr6uusqvaAhWh4IMKHeZzAoIQMwg8KAIwAg..i&w=513&h=376&bih=676&biw=1600&q=euclidean%20distance%20text&ved=0ahUKEwiOr6uusqvaAhWh4IMKHeZzAoIQMwg8KAIwAg&iact=mrc&uact=8
@@ -27,3 +29,5 @@ https://searchaws.techtarget.com/feature/Book-excerpt-AWS-S3-tutorial-for-newbie
 https://aws.amazon.com/lambda/
 https://apievangelist.com/2017/11/06/a-simple-api-using-aws-rds-lambda-and-api-gateway/
 
+Evaluation:
+https://computersciencesource.wordpress.com/2010/01/07/year-2-machine-learning-confusion-matrix/
