@@ -76,3 +76,16 @@ TODO:
 - talk to hyemi about skype meeting for large groups
 - ask group to create about-me slides
 - get credit for course / charge code discussion
+
+
+
+EC2 resources
+https://alestic.com/2010/12/ec2-user-data-output/
+https://chatbotslife.com/rasa-nlu-on-aws-28d962acbf53 - install spacy 
+https://ryan-cranfill.github.io/gensim-aws-lambda/  - gensim
+http://www.developintelligence.com/blog/2017/02/analyzing-4-million-yelp-reviews-python-aws-ec2-instance/ - mount drive
+
+NLP Publications
+Enriching Word Vectors with Subword Information: https://arxiv.org/pdf/1607.04606.pdf
+EFFICIENT VECTOR REPRESENTATION FOR DOCUMENTS
+THROUGH CORRUPTION: https://arxiv.org/pdf/1707.02377.pdf

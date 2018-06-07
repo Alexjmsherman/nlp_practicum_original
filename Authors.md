@@ -6,7 +6,7 @@ The NLP Practicum includes a series of lessons discussing NLP using the Python d
 ### People
 ------
 
-The following people have been core contributors to the NLP Practicum development and maintenance:
+The following people have been core contributors to the NLP Practicum development, maintenance, and logistics:
 
   * Alex Sherman (alsherman@deloitte.com) 
   * Jason Light (jaslight@deloitte.com)

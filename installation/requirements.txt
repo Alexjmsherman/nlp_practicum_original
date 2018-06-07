@@ -115,7 +115,7 @@ wheel=0.30.0=py35_2
 win_inet_pton=1.0.1=py35_1
 win_unicode_console=0.5=py35_0
 wincertstore=0.2=py35_0
-winpty=0.4.3=vc14_2
+# winpty=0.4.3=vc14_2
 wrapt=1.10.11=py35_0
 xlrd=1.1.0=py_2
 yaml=0.1.7=vc14_0
