@@ -50,19 +50,10 @@
 *  Topics: cosine similarity, distance metrics, l1 and l2 norm, recommendation engines
 *  Technology: scikit-learn, SpaCy, gensim
 
-### 12. Unsupervised ML (Clustering)
-*  Topics: Discuss clustering algorithms in scikit-learn
-*  Technology: scikit-learn
-*  Homework: Cluster section names from annual reports
-
-### 13. Document Classification
+### 12. Document Classification
 *  Topics: tbd
 *  Technology: scikit-learn
 
-### 14. Pipelines and Custom Transformers
-*  Topics: tbd
-*  Technology: scikit-learn
-
-### 15. Logging and Executables
+### 13. Pipelines and Custom Transformers
 *  Topics: capture, format, and send logging messages to a variety of output. Exception Handling. Create an executable of a python package for deployment
-*  Technology: logging, python exceptions, pyinstaller, argparse
+*  Technology: scikit-learn, logging, python exceptions, pyinstaller, argparse
