@@ -31,3 +31,4 @@ https://apievangelist.com/2017/11/06/a-simple-api-using-aws-rds-lambda-and-api-g
 
 Evaluation:
 https://computersciencesource.wordpress.com/2010/01/07/year-2-machine-learning-confusion-matrix/
+https://www.google.com/imgres?imgurl=https%3A%2F%2Fsebastianraschka.com%2Fimages%2Ffaq%2Fevaluate-a-model%2Fnested-k-fold.png&imgrefurl=https%3A%2F%2Fsebastianraschka.com%2Ffaq%2Fdocs%2Fevaluate-a-model.html&docid=FwccLhIfJ8Q_8M&tbnid=JaqlK7qlx1X8cM%3A&vet=10ahUKEwixqvSfmOrbAhWk1IMKHW02CH4QMwg-KAEwAQ..i&w=656&h=427&bih=674&biw=1600&q=nested%20cross%20validation&ved=0ahUKEwixqvSfmOrbAhWk1IMKHW02CH4QMwg-KAEwAQ&iact=mrc&uact=8
